@@ -2,7 +2,7 @@ const http = require('http');
 const responseBody = 
 `
 <h1 style="color: green">Hello Larker!</h1>
-<h2 style="color: green">Environment variable MY_VAR is ${process.env.MY_VAR || "[not set]"}</h2>
+<h2 style="color: green">Environment variable MY_VAR is "${process.env.MY_VAR || "[not set]"}"</h2>
 `
 http.createServer().on('request', (request, response) => {
     let body = []
